@@ -1,0 +1,83 @@
+/* 1. CSS Variables for consistency */
+:root {
+  --primary-color: #0056b3;
+  --bg-light: #f4f6f9;
+  --text-color: #333;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+}
+
+/* 2. Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 3. Global Layout Classes */
+.section {
+  padding: var(--spacing-lg) var(--spacing-sm);
+}
+
+.section-light {
+  background-color: var(--bg-light);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 4. Mobile-First Grid System */
+/* Default behavior: stack vertically for mobile */
+.flex-grid {
+  display: flex;
+  flex-direction: column; 
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+/* Tablet/Desktop behavior: display side-by-side */
+@media (min-width: 768px) {
+  .flex-grid {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .flex-col {
+    flex: 1; /* Makes columns share space equally */
+  }
+}
+
+/* 5. Global UI Components */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin-top: var(--spacing-sm);
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}

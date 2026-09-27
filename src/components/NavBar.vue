@@ -45,7 +45,7 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #e0e0e0;
+  color: #e0e0e0; /* <-- Change this hex code to your desired color */
   font-weight: 500;
   transition: color 0.2s ease;
 }

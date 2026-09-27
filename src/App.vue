@@ -1,15 +1,12 @@
 <script setup>
 import NavBar from './components/NavBar.vue'
-import AppFooter from './components/AppFooter.vue'
 </script>
 
 <template>
   <NavBar />
   
-  <!-- This tag swaps out the page components based on the URL -->
   <router-view />
   
-  <AppFooter />
 </template>
 
 <style scoped>

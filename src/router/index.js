@@ -1,16 +1,19 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ProductsView from '../views/ProductsView.vue'
+import BlogView from '../views/BlogView.vue'
+import AboutView from '../views/AboutView.vue'
+import ContactView from '../views/ContactView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(), // No base parameter needed for hash history
   routes: [
     { path: '/', name: 'home', component: HomeView },
-    { path: '/products', name: 'products', component: () => import('../views/ProductsView.vue') },
-    { path: '/blog', name: 'blog', component: () => import('../views/BlogView.vue') },
-    { path: '/about', name: 'about', component: () => import('../views/AboutView.vue') },
-    { path: '/contact', name: 'contact', component: () => import('../views/ContactView.vue') }
+    { path: '/products', name: 'products', component: ProductsView },
+    { path: '/blog', name: 'blog', component: BlogView },
+    { path: '/about', name: 'about', component: AboutView },
+    { path: '/contact', name: 'contact', component: ContactView }
   ],
-  // This ensures the page scrolls to the top when navigating between routes
   scrollBehavior() {
     return { top: 0 }
   }

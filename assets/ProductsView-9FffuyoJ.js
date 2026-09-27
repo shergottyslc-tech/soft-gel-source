@@ -1,1 +1,0 @@
-import{i as e,n as t,r as n,t as r}from"./index-C6pzocG2.js";var i={},a={class:`page-container`};function o(r,i){return e(),n(`div`,a,[...i[0]||=[t(`h1`,null,`Products`,-1),t(`p`,null,`Softgel catalog coming soon.`,-1)]])}var s=r(i,[[`render`,o],[`__scopeId`,`data-v-6b1c24de`]]);export{s as default};

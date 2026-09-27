@@ -8,7 +8,7 @@
       <img src="../assets/logo-no-bg.jpg" class="hero-logo" />
       <h1>Premium Softgel Manufacturing</h1>
       <p>Custom formulations, scalable production, and industry-leading quality control.</p>
-      <a href="#contact" class="btn">Get a Quote</a>
+      <a href="#contact" class="btn">Get a toke</a>
     </div>
   </section>
 </template>

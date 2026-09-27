@@ -1,29 +1,52 @@
 <script setup>
-import HeroSection from './components/HeroSection.vue'
-import InfoSection from './components/InfoSection.vue'
-import ContactForm from './components/ContactForm.vue'
-import AppFooter from './components/AppFooter.vue'
 import NavBar from './components/NavBar.vue'
+import AppFooter from './components/AppFooter.vue'
 </script>
 
 <template>
-  <main>
-    <NavBar />
-    <HeroSection />
-    <InfoSection />
-    <ContactForm />
-    <AppFooter />
-  </main>
+  <NavBar />
+  
+  <!-- This tag swaps out the page components based on the URL -->
+  <router-view />
+  
+  <AppFooter />
 </template>
 
-<style>
-/* Global styles */
-html {
-  scroll-behavior: smooth;
-  font-family: system-ui, -apple-system, sans-serif;
+<style scoped>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #261D1B;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
-body {
-  margin: 0;
-  padding: 0;
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.router-link-active {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
 }
 </style>

@@ -1,5 +1,6 @@
 <script setup>
 import NavBar from './components/NavBar.vue'
+import SiteFooter from './components/AppFooter.vue'
 </script>
 
 <template>
@@ -9,6 +10,8 @@ import NavBar from './components/NavBar.vue'
     <main class="main-content">
       <router-view />
     </main>
+
+    <SiteFooter />
   </div>
 </template>
 
@@ -22,6 +25,6 @@ import NavBar from './components/NavBar.vue'
 .main-content {
   /* Offsets view content so it doesn't sit under the fixed navbar */
   padding-top: 70px; 
-  flex: 1;
+  flex: 1; /* Pushes the footer to the bottom of the screen */
 }
 </style>
